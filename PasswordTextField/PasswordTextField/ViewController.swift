@@ -29,11 +29,9 @@ class ViewController: UIViewController {
 //    }
     
 
-    
-    @IBAction func valueChanged(_ sender: PasswordField) {
-        
-        print("Editing")
-
-    }
+//    @IBAction func editingBegin(_ sender: PasswordField) {
+//        print("Editing")
+//
+//    }
     
 }
