@@ -23,9 +23,9 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
 
         // Uncomment this portion to set up the dictionary
-        let str = "lambda"
-        let referenceVC = UIReferenceLibraryViewController(term: str)
-        present(referenceVC, animated: true, completion: nil)
+//        let str = "lambda"
+//        let referenceVC = UIReferenceLibraryViewController(term: str)
+//        present(referenceVC, animated: true, completion: nil)
     }
     
     

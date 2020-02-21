@@ -110,20 +110,22 @@ class PasswordField: UIControl {
         addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 10.0),
-            stackView.leadingAnchor.constraint(equalTo: textField.leadingAnchor),
-            stackView.widthAnchor.constraint(equalToConstant: bounds.width - 80),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10.0),
+            stackView.widthAnchor.constraint(equalToConstant: bounds.width - 150),
+            stackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 8.0),
             stackView.heightAnchor.constraint(equalToConstant: colorViewSize.height)
         ])
         
         addSubview(strengthDescriptionLabel)
-        strengthDescriptionLabel.backgroundColor = .red
-        strengthDescriptionLabel.translatesAutoresizingMaskIntoConstraints = true
-        strengthDescriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
-        strengthDescriptionLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0).isActive = true
-        strengthDescriptionLabel.text = "Test"
-        
-       
+        strengthDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        strengthDescriptionLabel.adjustsFontSizeToFitWidth = true
+        strengthDescriptionLabel.textAlignment = .right
+            
+        NSLayoutConstraint.activate([
+            strengthDescriptionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8.0),
+            strengthDescriptionLabel.leftAnchor.constraint(equalTo: stackView.rightAnchor, constant: 8.0),
+            strengthDescriptionLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -8.0)
+        ])
     }
     
     @objc func hideButtonTapped() {
