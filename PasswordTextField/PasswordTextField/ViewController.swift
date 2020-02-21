@@ -34,4 +34,7 @@ class ViewController: UIViewController {
 //
 //    }
     
+    @IBAction func valueChanged(_ sender: PasswordField) {
+        print(sender.password)
+    }
 }
